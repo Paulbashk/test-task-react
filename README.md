@@ -36,7 +36,7 @@ https://www.figma.com/file/282MZ8TlQTZVszteAD1XRf/%D0%A2%D0%B5%D1%81%D1%82%D0%BE
 # Установить node-sass необходимой версии:
 ### `npm install node-sass@4.14`
 
-# Автор: Paulbash ( Бабушкин Павел )
+# Мои контакты: ( Бабушкин Павел )
 ### VK: http://vk.com/paul.bash
 ### Telegram: https://t.me/PaulBush
 
