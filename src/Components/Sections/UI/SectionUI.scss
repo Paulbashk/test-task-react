@@ -1,0 +1,395 @@
+/* Компонент: Секция UI ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+@import "../../SASS/Components/mixins.scss";
+
+.section-ui {
+  $self: &;
+
+  /* START */
+  /* CODE BLOCK: MAIN STYLES */
+  /* START */
+
+  display: grid;
+  grid-template-areas:
+    "title"
+    "inputs"
+    "listen"
+    "buttons"
+    "selections"
+    "accordion";
+
+  &__wrapper-content {
+    margin-bottom: 64px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 72px;
+
+      &--listen {
+        padding-bottom: 196px !important;
+      }
+    }
+
+    @media (max-width: $breakpoint-alternative-xsm) {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--inputs {
+      grid-area: inputs;
+    }
+
+    &--listen {
+      grid-area: listen;
+      padding-bottom: 167px;
+    }
+
+    &--buttons {
+      grid-area: buttons;
+    }
+
+    &--selections {
+      grid-area: selections;
+    }
+
+    &--accordion {
+      grid-area: accordion;
+    }
+  }
+
+  &__item-title {
+    @media (max-width: $breakpoint-md) {
+      &--input {
+        min-width: unset;
+        margin-bottom: 0;
+        min-height: auto;
+        margin-bottom: 8px;
+      }
+
+      &--button {
+        margin-bottom: 16px;
+      }
+    }
+
+    &--input {
+      min-width: 1px;
+      margin-bottom: auto;
+      min-height: auto;
+      margin-bottom: 16px;
+    }
+
+    &--button {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__wrapper-title {
+    margin-bottom: 48px;
+    grid-area: title;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 48px;
+    }
+  }
+
+  /* END */
+  /* CODE BLOCK: MAIN STYLES */
+  /* END */
+
+  /* START */
+  /* CODE BLOCK: Inputs */
+  /* START */
+
+  &__wrapper-inputs {
+    @include wrapper-grid;
+    margin-bottom: -48px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-input {
+    margin-top: auto;
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 0;
+    }
+  }
+
+  &__wrapper-input {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    grid-column: span 3;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      min-height: unset;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        #{ $self }__item-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--hover {
+      #{ $self }__input {
+        border-bottom: 2px solid $mainBlue;
+      }
+    }
+
+    &--word {
+      &:hover {
+        #{ $self }__input {
+          border-bottom: 4px solid $mainBlue;
+        }
+      }
+
+      #{ $self }__input {
+        border-bottom: 4px solid $mainBlue;
+      }
+    }
+
+    &--error {
+      &:hover {
+        #{ $self }__input {
+          border-bottom: 4px solid $mainRed;
+        }
+      }
+
+      #{ $self }__label {
+        color: $mainRed;
+      }
+
+      #{ $self }__input {
+        border-bottom: 4px solid $mainRed;
+
+        &:focus,
+        &:active {
+          border-bottom: 4px solid $mainRed;
+        }
+      }
+    }
+  }
+
+  /* END */
+  /* CODE BLOCK: Inputs */
+  /* END */
+
+  /* START */
+  /* CODE BLOCK: Selections */
+  /* START */
+
+  &__wrapper-selected {
+    @include wrapper-grid;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: -40px;
+    }
+  }
+
+  &__wrapper-select {
+    min-height: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 3;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      min-height: unset;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+    }
+
+    &--hover {
+      #{ $self }__new-select {
+        border-bottom: 2px solid $mainBlue;
+      }
+    }
+  }
+
+  &__select {
+    padding-top: 4px;
+    margin-top: auto;
+
+    @media (max-width: $breakpoint-md) {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  /* END */
+  /* CODE BLOCK: Selections */
+  /* END */
+
+  /* START */
+  /* CODE BLOCK: Buttons */
+  /* START */
+
+  &__wrapper-buttons {
+    @include wrapper-grid;
+    margin-bottom: -32px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: -32px;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper-btn {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+    grid-column: span 3;
+    width: fit-content;
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      min-height: unset;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        #{ $self }__item-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--click,
+    &--hover {
+      #{ $self }__button {
+        color: #fff;
+        background: linear-gradient(225deg, #dd80ed 0%, #3d28e3 100%);
+      }
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 0;
+    }
+  }
+
+  /* END */
+  /* CODE BLOCK: Buttons */
+  /* END */
+
+  /* START */
+  /* CODE BLOCK: Radio, checkbox buttons */
+  /* START */
+
+  &__wrapper-grid {
+    @include wrapper-grid;
+  }
+
+  &__wrapper-radioes,
+  &__wrapper-checkboxes {
+    grid-column: span 4;
+
+    @media (max-width: $breakpoint-xl) {
+      grid-column: span 3;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+    }
+  }
+
+  &__wrapper-checkboxes {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  /* END */
+  /* CODE BLOCK: Radio, checkbox buttons */
+  /* END */
+
+  /* START */
+  /* CODE BLOCK: Accordeon */
+  /* START */
+
+  &__wrapper-accordion--hover-2 {
+    #{ $self }__acc-item {
+      &:nth-child(3) {
+        border-bottom: 1px solid $mainBlue;
+
+        #{ $self }__name {
+          color: $textColor;
+        }
+      }
+    }
+  }
+
+  /* END */
+  /* CODE BLOCK: Accordeon */
+  /* END */
+}

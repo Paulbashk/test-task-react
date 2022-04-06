@@ -1,0 +1,32 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- Mixins Files ---------------------------------
+//  ------------------------------------------------------------------------------
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin wrapper-grid {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+
+  @media (max-width: $breakpoint-xl) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+
+  @media (max-width: $breakpoint-xsm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

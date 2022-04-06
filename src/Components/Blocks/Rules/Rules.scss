@@ -1,0 +1,77 @@
+/* Компонент: Вьюпорты экрана ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+@import "../../SASS/Components/mixins.scss";
+
+.rules {
+  &__rule {
+    margin-bottom: 64px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__designations {
+    @include wrapper-grid;
+    margin-bottom: 48px;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__designation {
+    grid-column: span 2;
+
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 1;
+    }
+  }
+
+  &__name {
+    margin-bottom: 8px;
+  }
+
+  &__number {
+    font-size: 24px;
+    line-height: 32px;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    @media (max-width: $breakpoint-alternative-xsm) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__wrapper-image {
+    max-height: 480px;
+
+    @media (max-width: $breakpoint-md) {
+      max-height: unset;
+    }
+  }
+
+  &__img {
+    max-height: inherit;
+  }
+}

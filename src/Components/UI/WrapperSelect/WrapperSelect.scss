@@ -1,0 +1,22 @@
+/* Компонент:  Обертка - Выпадающий список ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.wrapper-select {
+  @media (max-width: $breakpoint-md) {
+    padding-bottom: 12px;
+  }
+
+  &__select {
+    max-height: 32px;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &__item-title {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 8px;
+    }
+  }
+}

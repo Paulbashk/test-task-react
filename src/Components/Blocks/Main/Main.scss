@@ -1,0 +1,65 @@
+/* Компонент: Основа сетки ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.main {
+  $self: &;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__block-left {
+    grid-column: 1 / span 3;
+
+    @media (max-width: $breakpoint-xl) {
+      grid-column: 1 / span 2;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: unset;
+    }
+  }
+
+  &__block-right {
+    grid-column: 4 / span 9;
+    display: grid;
+    grid-template-areas:
+      "preview"
+      "grids"
+      "rules"
+      "print"
+      "ui";
+
+    @media (max-width: $breakpoint-xl) {
+      grid-column: 3 / span 6;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: 1 / span 8;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-column: 1 / span 4;
+    }
+
+    #{ $self }__section-preview {
+      grid-area: preview;
+    }
+
+    #{ $self }__section-grid {
+      grid-area: grids;
+    }
+
+    #{ $self }__section-rules {
+      grid-area: rules;
+    }
+
+    #{ $self }__section-print {
+      grid-area: print;
+    }
+
+    #{ $self }__section-ui {
+      grid-area: ui;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/* Компонент: Табы, переключатели - Навигация ( SCSS ) */
+@import "../../../SASS/Components/variables.scss";
+
+.tabs-nav {
+  $self: &;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cbcbcc;
+  margin-bottom: 48px;
+
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 48px;
+  }
+
+  &__tab {
+    margin-right: 32px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f2f2f2;
+    cursor: pointer;
+    user-select: none;
+    transition: all $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      margin-right: 24px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      border-bottom: 2px solid $mainBlue;
+
+      #{ $self }__name {
+        color: $textColor !important;
+      }
+    }
+  }
+
+  &__name {
+    &--tab {
+      font-weight: 500;
+      color: $mainGrey;
+    }
+  }
+}

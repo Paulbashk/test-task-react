@@ -1,0 +1,212 @@
+/* Компонент: Icon ( SCSS ) */
+@import "../../../SASS/Components/variables.scss";
+@import "../../../SASS/Components/mixins.scss";
+
+.modal-information {
+  $breakpointHeight: 689.98px;
+  $self: &;
+
+  &__overlay {
+    background-image: url("../../../../Images/Modal.jpg");
+    background-color: none;
+  }
+
+  &__close {
+    grid-column: 12;
+    margin-left: auto;
+    position: static;
+
+    #{ $self }__path {
+      fill: white !important;
+    }
+
+    @media (max-width: $breakpoint-xl) {
+      grid-column: 8;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      #{ $self }__path {
+        fill: black !important;
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      position: absolute;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      top: 40px;
+    }
+  }
+
+  &__grid {
+    height: 100%;
+  }
+
+  &__wrapper {
+    padding: 24px 16px 40px 16px;
+    height: 100%;
+    grid-template-rows: fit-content(100%);
+    position: static;
+  }
+
+  &__content {
+    grid-column: 2 / span 5;
+    grid-row: 2;
+
+    @media (max-width: $breakpoint-xl) {
+      grid-column: 2 / span 4;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      grid-column: 2 / span 5;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+    }
+  }
+
+  &__window {
+    height: calc(100vh - 16px);
+    min-width: 760px;
+    width: calc(56.54% - 8px);
+
+    @media (max-width: $breakpoint-lg) {
+      min-width: unset;
+      max-width: unset;
+      height: 100%;
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__logo {
+    grid-column: 1 / span 1;
+  }
+
+  &__circle {
+    &--footer {
+      @include flex-center;
+      margin-right: 24px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (max-width: $breakpoint-sm) and (max-height: $breakpointHeight) {
+      margin-right: 12px;
+    }
+  }
+
+  &__header {
+    margin-bottom: 48px;
+    grid-column: span 3;
+    display: grid;
+    column-gap: 32px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 40px;
+      grid-column: span 4;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: $breakpoint-sm) and (max-height: $breakpointHeight) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    grid-column: 2 / span 2;
+    align-self: center;
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: unset;
+      display: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (max-width: $breakpoint-sm) and (max-height: $breakpointHeight) {
+      font-size: 22px !important;
+      line-height: 30px !important;
+    }
+  }
+
+  &__description {
+    margin-bottom: 32px;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $breakpoint-sm) and (max-height: $breakpointHeight) {
+      overflow-y: scroll;
+      max-height: 250px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__phone-link {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+    color: $textColor;
+
+    &:hover {
+      color: $textColor;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    grid-column: 2 / span 4;
+
+    @media (max-width: $breakpoint-md) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-column: span 2;
+    }
+  }
+
+  &__social-link {
+    color: $mainBlue;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    max-width: fit-content;
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

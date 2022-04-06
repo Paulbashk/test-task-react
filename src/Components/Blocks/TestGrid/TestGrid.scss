@@ -1,0 +1,89 @@
+/* Компонент: Сетка, для проверки задания ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+@import "../../SASS/Components/mixins.scss";
+
+.grid-layout {
+  @include flex-center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-xl) {
+    &__ctr {
+      max-width: 928px !important;
+      min-width: 672px !important;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+      column-gap: 32px !important;
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    &__ctr {
+      max-width: 424px !important;
+      min-width: 296px !important;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      column-gap: 24px !important;
+    }
+  }
+
+  @media (max-width: $breakpoint-xsm) {
+    &__ctr {
+      max-width: 424px !important;
+      max-width: unset !important;
+    }
+
+    &__wrapper {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  &__ctr {
+    max-width: 1312px;
+    min-width: 1072px;
+    width: calc(100% - 32px);
+    position: fixed;
+    margin: 0 -16px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__block {
+    height: 100vh;
+    background: green;
+    opacity: 0.2;
+    width: 100%;
+    max-width: 100%;
+
+    @media (max-width: $breakpoint-xl) {
+      &:nth-child(n + 9) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      &:nth-child(n + 5) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-xsm) {
+      &:nth-child(n + 3) {
+        display: none;
+      }
+    }
+  }
+}

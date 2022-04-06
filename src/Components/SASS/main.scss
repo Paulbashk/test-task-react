@@ -1,0 +1,29 @@
+/* Переменные */
+@import "./Components/variables.scss";
+
+/* Миксины */
+@import "./Components/mixins.scss";
+
+/* Шрифты */
+@import "./Components/fonts.scss";
+
+/* Import: Reboot CSS ( normalize.css ) */
+@import "./Import/normalize.scss";
+
+/* Компонент: Анимации */
+@import "./Import/animate.min.scss";
+
+/* Style-custom-reset */
+@import "./Components/Blocks/default-set.scss";
+
+/* Типографика */
+@import "./Components/typography.scss";
+
+/* Компонент: Фиксирование, прилипание */
+@import "./Components/Blocks/sticky.scss";
+
+/* Компонент: Ограничение макс. ширины */
+@import "./Components/Blocks/restrict-width.scss";
+
+/* Анимации */
+@import "./Components/animations.scss";

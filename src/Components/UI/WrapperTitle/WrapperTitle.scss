@@ -1,0 +1,26 @@
+/* Компонент: Обертка для заголовка ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.wrapper-title {
+  margin-bottom: 48px;
+
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+
+    .section-title {
+      margin-bottom: 24px;
+    }
+
+    .description {
+      max-width: unset;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+
+  .description {
+    max-width: 592px;
+  }
+}

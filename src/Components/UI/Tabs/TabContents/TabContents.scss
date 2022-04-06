@@ -1,0 +1,23 @@
+/* Компонент: Табы, переключатели - Контент ( SCSS ) */
+@import "../../../SASS/Components/variables.scss";
+@import "../../../SASS/Components/animations.scss";
+
+.tab-contents {
+  @media (max-width: $breakpoint-md) {
+    padding-left: 16px;
+  }
+
+  @media (max-width: $breakpoint-alternative-xsm) {
+    padding-left: 0;
+  }
+
+  &__tab-content {
+    display: none;
+
+    &--active {
+      display: block;
+      animation-duration: 1s;
+      animation-name: show;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+/* Компонент: секция Preview ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.section-preview {
+  &__wrapper-title {
+    margin-bottom: 64px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__main-title {
+    margin-bottom: 16px;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 8px;
+    }
+  }
+}

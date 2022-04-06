@@ -1,0 +1,94 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- Components Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+// Components Default Set
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: GraphikLCG;
+  font-style: normal;
+  color: $textColor;
+}
+
+html,
+body {
+  background: $bgPage;
+  font-size: 10px;
+}
+
+body {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+dl,
+ol,
+ul,
+a,
+p,
+span,
+div,
+img,
+nav,
+header,
+footer,
+button,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+input,
+textarea,
+button {
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: none;
+  display: block;
+
+  &::placehloder {
+    box-sizing: border-box;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  opacity: 1;
+  transition: all $timeTrans linear;
+  user-select: none;
+
+  &:hover {
+    color: $mainBlue;
+  }
+}

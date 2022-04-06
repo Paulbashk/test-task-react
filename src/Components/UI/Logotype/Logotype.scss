@@ -1,0 +1,38 @@
+/* Компонент: Логотип ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+@import "../../SASS/Components/mixins.scss";
+
+.logo {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+
+  &__circle {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: #ff3a62;
+    margin-right: 24px;
+
+    @media (max-width: $breakpoint-md) {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+    }
+  }
+
+  &__wrapper-text {
+    @media (max-width: $breakpoint-xsm) {
+      display: none;
+    }
+  }
+
+  &__lastname {
+    color: #1b1b1b !important;
+    font-weight: 500 !important;
+  }
+}

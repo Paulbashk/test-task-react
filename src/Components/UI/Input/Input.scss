@@ -1,0 +1,87 @@
+/* Компонент: Input ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.wrapper-input {
+  $self: &;
+
+  position: relative;
+
+  &__item-input {
+    &:hover {
+      #{ $self }__input {
+        border-bottom: 2px solid $mainBlue;
+
+        &:focus,
+        &:active {
+          border-bottom: 4px solid $mainBlue;
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-family: GraphikLCG;
+    font-size: 12px;
+    line-height: 20px;
+    color: $mainGrey;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: color $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #aeadae;
+    font-family: GraphikLCG;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $textColor;
+    transition: border $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 26px;
+
+      &::placeholder {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    &::placeholder {
+      font-family: GraphikLCG;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $textColor;
+    }
+
+    &:focus,
+    &:active {
+      border-bottom: 4px solid $mainBlue;
+    }
+  }
+
+  &__message {
+    font-size: 14px;
+    line-height: 20px;
+    color: $mainRed !important;
+    margin-top: 6px;
+    transition: opacity $timeTrans linear;
+    position: absolute;
+
+    @media (max-width: $breakpoint-md) {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

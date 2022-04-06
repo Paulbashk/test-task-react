@@ -1,0 +1,20 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- Components Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+// Components Restrict width
+.restrict-592 {
+  max-width: 592px;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: unset;
+  }
+}
+
+.restrict-384 {
+  max-width: 384px;
+
+  @media (max-width: $breakpoint-md) {
+    max-width: unset;
+  }
+}

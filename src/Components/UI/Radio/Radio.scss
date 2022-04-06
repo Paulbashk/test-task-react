@@ -1,0 +1,127 @@
+/* Компонент: Radio ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.radio {
+  $self: &;
+
+  margin-bottom: 24px;
+
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 32px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__custom-radio + &__label::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #aeadae;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    cursor: pointer;
+    transition: all $timeTrans linear;
+
+    @media (max-width: $breakpoint-md) {
+      width: 32px;
+      height: 32px;
+      margin-right: 24px;
+    }
+  }
+
+  &__custom-radio:not(:disabled):not(:checked) + &__label:hover::before {
+    border-color: $mainBlue;
+  }
+
+  &__custom-radio:not(:disabled):active + &__label::before {
+    background-color: $mainBlue;
+    border-color: $mainBlue;
+  }
+
+  &__custom-radio:focus + &__label::before {
+    box-shadow: 0 0 0 0.2rem rgba(62, 41, 227, 0.25);
+  }
+
+  &__custom-radio:focus:not(:checked) + &__label::before {
+    border-color: $mainBlue;
+  }
+
+  &__custom-radio:checked + &__label::before {
+    border-color: $mainBlue;
+  }
+
+  &__custom-radio:checked + &__label::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z' fill='%233E29E3'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+
+    @media (max-width: $breakpoint-md) {
+      left: 7px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__custom-radio:disabled + &__label::before {
+    background-color: #cbcbcc;
+  }
+
+  &__custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+    transition: all $timeTrans linear;
+
+    &--hover {
+      border-color: $mainBlue;
+    }
+  }
+
+  &__custom-radio + &__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transition: all $timeTrans linear;
+
+    &--hover {
+      &::before {
+        border-color: $mainBlue !important;
+      }
+      &:hover {
+        &::before {
+          border-color: $mainBlue !important;
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-size: 16px;
+    line-height: 24px;
+    color: $textColor;
+    position: relative;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+//  ------------------------------------------------------------------------------
+//  ----------------------------- CSS Components Files ------------------------------
+//  ------------------------------------------------------------------------------
+
+// Components Typography
+h1,
+h2 {
+  font-weight: 700 !important;
+}
+
+h1 {
+  font-size: 48px !important;
+  line-height: 56px !important;
+}
+
+h2 {
+  font-size: 32px !important;
+  line-height: 40px !important;
+}
+
+h3,
+h4 {
+  font-weight: 500 !important;
+}
+
+h3 {
+  font-size: 24px !important;
+  line-height: 32px !important;
+  margin-bottom: 32px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 18px !important;
+  line-height: 26px !important;
+}
+
+p,
+span,
+a {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+p.lead,
+.text-lead {
+  font-size: 24px !important;
+  line-height: 32px !important;
+}
+
+p.strong,
+.text-strong,
+strong {
+  font-size: 18px !important;
+  line-height: 26px !important;
+}
+
+p.min,
+.text-min {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: $mainGrey !important;
+}
+
+// For Mobile
+@media (max-width: $breakpoint-md) {
+  h1 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+
+  p,
+  span,
+  a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  p.lead,
+  .text-lead {
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+
+  p.strong,
+  .text-strong,
+  strong {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+
+  p.min,
+  .text-min {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}

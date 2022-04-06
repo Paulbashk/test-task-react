@@ -1,0 +1,10 @@
+/* Компонент: Заголовок секции ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.section-title {
+  margin-bottom: 48px;
+
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
+}

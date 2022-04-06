@@ -1,0 +1,75 @@
+/* Компонент: Шапка сайта ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+@import "../../Blocks/Grid/Grid.scss";
+
+.header {
+  padding: 32px 0;
+  margin-bottom: 16px;
+
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+
+    &__wrapper-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__svg {
+      width: 36px !important;
+      height: 32px !important;
+    }
+  }
+
+  @media (max-width: $breakpoint-alternative-xsm) {
+    margin-bottom: 24px;
+  }
+
+  &__wrapper {
+    grid-template-areas: "logo logo menu-open";
+    grid-template-columns: unset !important;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-xsm) {
+      grid-template-areas: "logo menu-open";
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    grid-area: menu-open;
+    align-self: center;
+
+    &:hover {
+      &:after,
+      &:before {
+        opacity: 0.6;
+      }
+    }
+
+    &:after,
+    &:before {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: $textColor;
+      transition: opacity $timeTrans linear;
+    }
+
+    &:after {
+      width: 24px;
+    }
+
+    &:before {
+      width: 32px;
+      margin-bottom: 6px;
+    }
+  }
+}

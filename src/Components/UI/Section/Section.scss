@@ -1,0 +1,14 @@
+/* Компонент: Секция ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+section {
+  margin-bottom: 80px;
+
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 90px;
+  }
+
+  @media (max-width: $breakpoint-alternative-xsm) {
+    margin-bottom: 40px;
+  }
+}

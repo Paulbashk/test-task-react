@@ -1,0 +1,18 @@
+/* Компонент: Футер, подвал сайта ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+@import "../../SASS/Components/mixins.scss";
+
+.footer {
+  @include flex-center;
+  padding-top: 80px;
+  padding-bottom: 48px;
+
+  @media (max-width: $breakpoint-md) {
+    padding-top: 0;
+    padding-bottom: 90px;
+  }
+
+  &__info {
+    text-align: center;
+  }
+}

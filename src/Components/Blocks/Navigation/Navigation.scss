@@ -1,0 +1,39 @@
+/* Компонент: Навигация сайта ( SCSS ) */
+@import "../../SASS/Components/variables.scss";
+
+.navigation {
+  $self: &;
+  padding-top: 131px;
+
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    color: $mainGrey;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: $textColor;
+    }
+  }
+
+  &__link--active {
+    color: $mainBlue;
+
+    &:hover {
+      color: $mainBlue;
+    }
+  }
+}
